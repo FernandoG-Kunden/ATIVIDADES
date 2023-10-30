@@ -1,18 +1,25 @@
+.container{
+    width: 400px;
+    height: 450px;
+}
 
-.container {
-width: 100vw;
-height: 100vh;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
+.box-anos{
+    margin-bottom: 20px;
+        }
+
+.box-meses{
+    margin-bottom: 20px; 
 }
-.box {
-width: 500px;
-height: 900px;
-background: white;
-border: 1px solid black;
+
+.box-dias{
+    margin-bottom: 20px;
 }
-body {
-margin: 0px;
+
+.box-resultado{
+    margin-bottom: 10px;
+}
+
+#input-resultado {
+    height: 200px;
+    width: 370px;
 }

@@ -19,7 +19,25 @@
     margin-bottom: 10px;
 }
 
+.box-btn {
+    margin-left: 5px;
+}
+
 #input-resultado {
     height: 200px;
     width: 370px;
+    
 }
+
+#input-anos {
+    margin-left: 5px;
+}
+
+#input-meses{
+    margin-left: 5px;
+}
+
+#input-dias {
+    margin-left: 5px;
+}
+

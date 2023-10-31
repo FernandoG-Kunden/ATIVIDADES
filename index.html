@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividades</title>
     <link rel="stylesheet" href="estilo.css">
+    <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
 
@@ -14,19 +15,19 @@
         <legend>ATIVIDADE 01</legend>
      
             <div class="box-anos">
-                <label for="input-anos">Anos:</label>
+                <label class="lbl-anos" for="input-anos">Anos:</label>
                 <br>
                 <input type="number" id="input-anos">
             </div>
             
             <div class="box-meses">
-                <label for="input-meses">Meses:</label>
+                <label class="lbl-meses" for="input-meses">Meses:</label>
                 <br>
                 <input type="number" id="input-meses">
             </div>
             
             <div class="box-dias">
-                <label for="input-dias">Dias:</label>
+                <label class="lbl-dias" for="input-dias">Dias:</label>
                 <br>
                 <input type="number" id="input-dias">
             </div>
@@ -34,13 +35,34 @@
             <div class="box-resultado">
                 <label for="input-resultado">Resultado:</label >
                 <br>
-                <input type="number" id="input-resultado" >
+                <input type="number" id="input-resultado" readonly >
             </div>
             
             <div class="box-btn">
-                <input type="button" value="Calcular">
+                <button id="mybtn">Calcular</button>
             </div>
-           
+            
+            <script>
+                const mybtn = document.getElementById("mybtn")
+                const anos = document.getElementById("input-anos")
+                const meses = document.getElementById("input-meses")
+                const dias = document.getElementById("input-dias")
+                const resultado = document.getElementById("input-resultado")
+
+                mybtn.addEventListener("click", function(){
+                
+                let TotalDiasPorAno = 365 
+                let TotalDiasPorMes = 30
+                let TotalDias = null
+
+                TotalDias = (TotalDiasPorAno * anos.value) + (TotalDiasPorMes * meses.value + dias.value) 
+
+
+
+                resultado.value = TotalDias
+})
+            </script>
+
 
     </fieldset>
 

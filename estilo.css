@@ -1,43 +1,49 @@
-.container{
-    width: 400px;
-    height: 450px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.box-anos{
-    margin-bottom: 20px;
-        }
-
-.box-meses{
-    margin-bottom: 20px; 
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.box-dias{
+fieldset{
+    height: 378px;
+    width: 350px;
+    margin: 20px;
+}
+
+fieldset legend{
+    margin-left: 20px;
+}
+
+.box-input {
+    margin-left: 10px;
     margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.input{
+    margin-left: 5px;
+    padding-left: 5px;
 }
 
 .box-resultado{
-    margin-bottom: 10px;
+    margin-left: 12px;
 }
 
-.box-btn {
+#resultado-input{
+    width: 300px;
+    height: 120px;
+    margin-bottom: 3px;
+    padding: 5px;
+}
+
+#btn-calcular {
     margin-left: 5px;
+    padding: 0px 5px 0px 5px;    
 }
-
-#input-resultado {
-    height: 200px;
-    width: 370px;
-    
-}
-
-#input-anos {
-    margin-left: 5px;
-}
-
-#input-meses{
-    margin-left: 5px;
-}
-
-#input-dias {
-    margin-left: 5px;
-}
-

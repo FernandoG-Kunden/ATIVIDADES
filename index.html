@@ -8,66 +8,80 @@
     <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
+    <fieldset>
+        <legend>ATIVIDADE01</legend>
 
-<main>
-  
-    <fieldset class="container">
-        <legend>ATIVIDADE 01</legend>
-     
-            <div class="box-anos">
-                <label class="lbl-anos" for="input-anos">Anos:</label>
-                <br>
-                <input type="number" id="input-anos">
-            </div>
-            
-            <div class="box-meses">
-                <label class="lbl-meses" for="input-meses">Meses:</label>
-                <br>
-                <input type="number" id="input-meses">
-            </div>
-            
-            <div class="box-dias">
-                <label class="lbl-dias" for="input-dias">Dias:</label>
-                <br>
-                <input type="number" id="input-dias">
-            </div>
-            
-            <div class="box-resultado">
-                <label for="input-resultado">Resultado:</label >
-                <br>
-                <input type="number" id="input-resultado" readonly >
-            </div>
-            
-            <div class="box-btn">
-                <button id="mybtn">Calcular</button>
-            </div>
-            
-            <script>
-                const mybtn = document.getElementById("mybtn")
-                const anos = document.getElementById("input-anos")
-                const meses = document.getElementById("input-meses")
-                const dias = document.getElementById("input-dias")
-                const resultado = document.getElementById("input-resultado")
+        <div class="box-input">
+            <label class="lbl-input">Anos:</label>
+            <br>
+            <input id="input-anos" class="input" type="number"  required>         
+        </div>        
+        <div class="box-input">
+            <label class="lbl-input">Meses:</label>
+            <br>
+            <input class="input" type="number"  required> 
+        </div>
+        <div class="box-input">
+            <label class="lbl-input">Dias:</label>
+            <br>
+            <input class="input" type="number" required>
+        </div>
+        <div class="box-resultado">
+            <label class="lbl-input">Resultado:</label>
+            <br>
+            <textarea name="Resultado" id="resultado-input" cols="30" rows="10" readonly></textarea>
+            <button onclick="SumDays()" id="btn-calcular">Calcular</button>
+        </div>
+    
+   
+        <script>        
+           const Field = document.querySelectorAll(".input") 
+           const Resultado = document.getElementById("resultado-input")
+           let TotalDiasAno;
+           let TotalDiasMes; 
+           let TotalDias;
 
-                mybtn.addEventListener("click", function(){
+
+            function SumDays(){
+                if(Field[0].hasChildNodes() == true){
+                    TotalDiasAno = 0
+                }
+                else{
+                    TotalDiasAno = 365 * Field[0].value
+                }
+                if(Field[1].hasChildNodes() == true){
+                    TotalDiasMes = 0
+                }
+                else{
+                    TotalDiasMes = 30 * Field[0].value
+                }
+                if(Field[2].value == '' ){
+                    TotalDias = 0
+                }
+                else{
+                    TotalDias = Field[2].value
+                }
+
+                console.log(TotalDiasAno)
+                console.log(TotalDiasMes)
+                console.log(TotalDias)
                 
-                let TotalDiasPorAno = 365 
-                let TotalDiasPorMes = 30
-                let TotalDias = null
+                
+            
 
-                TotalDias = (TotalDiasPorAno * anos.value) + (TotalDiasPorMes * meses.value + dias.value) 
+                let SomaDias = parseInt(TotalDias) + parseInt(TotalDiasMes) + parseInt(TotalDiasAno) 
 
+                
+                Resultado.value = SomaDias;
+            }
+        
+        </script>
 
-
-                resultado.value = TotalDias
-})
-            </script>
-
-
-    </fieldset>
 
     
-</main>
+    </fieldset>
+
+
 
 
 

@@ -5,82 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividades</title>
     <link rel="stylesheet" href="estilo.css">
-    <script type="text/javascript" src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <fieldset>
-        <legend>ATIVIDADE01</legend>
 
-        <div class="box-input">
+    <form id="form">   
+        <fieldset>
+            <legend>ATIVIDADE 01</legend>
+
             <label class="lbl-input">Anos:</label>
-            <br>
-            <input id="input-anos" class="input" type="number"  required>         
-        </div>        
-        <div class="box-input">
+            <input class="input" type="number"  required>         
+
             <label class="lbl-input">Meses:</label>
-            <br>
             <input class="input" type="number"  required> 
-        </div>
-        <div class="box-input">
+
+
             <label class="lbl-input">Dias:</label>
-            <br>
             <input class="input" type="number" required>
-        </div>
-        <div class="box-resultado">
-            <label class="lbl-input">Resultado:</label>
-            <br>
-            <textarea name="Resultado" id="resultado-input" cols="30" rows="10" readonly></textarea>
-            <button onclick="SumDays()" id="btn-calcular">Calcular</button>
-        </div>
-    
-   
-        <script>        
-           const Field = document.querySelectorAll(".input") 
-           const Resultado = document.getElementById("resultado-input")
-           let TotalDiasAno;
-           let TotalDiasMes; 
-           let TotalDias;
 
+            <div id="box-result">
+                <label id="lbl-resultado">Resultado:</label>
+                <textarea name="Resultado" id="resultado-input" readonly></textarea>
+                <button  id="btn-calcular">Calcular</button>
+            </div>
 
-            function SumDays(){
-                if(Field[0].hasChildNodes() == true){
-                    TotalDiasAno = 0
-                }
-                else{
-                    TotalDiasAno = 365 * Field[0].value
-                }
-                if(Field[1].hasChildNodes() == true){
-                    TotalDiasMes = 0
-                }
-                else{
-                    TotalDiasMes = 30 * Field[0].value
-                }
-                if(Field[2].value == '' ){
-                    TotalDias = 0
-                }
-                else{
-                    TotalDias = Field[2].value
-                }
-
-                console.log(TotalDiasAno)
-                console.log(TotalDiasMes)
-                console.log(TotalDias)
-                
-                
-            
-
-                let SomaDias = parseInt(TotalDias) + parseInt(TotalDiasMes) + parseInt(TotalDiasAno) 
-
-                
-                Resultado.value = SomaDias;
-            }
-        
-        </script>
-
-
-    
-    </fieldset>
-
+        </fieldset> 
+    </form>
 
 
 

@@ -1,70 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividades</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <title>Atividades</title>
 </head>
 <body>
+    <main>
+        <section>
+            <fieldset id="atividade01">
+                <legend>ATIVIDADE01</legend>
+    
+                 <label for="input-anos">Anos:</label>
+                 <input type="number" id="input-anos" required>
+    
+                 <label for="input-meses">Meses:</label>
+                 <input type="number" id="input-meses" required>
+    
+                 <label for="input-dias">Dias:</label>
+                 <input type="number" id="input-dias" required>
+                 <div>
+                    <label for="result01">Resultado: </label>
+                    <textarea id="result01" readonly></textarea>
+                    <button id="btn-calcular01" title="Calcular dias">Calcular</button>
+                </div>
+            </fieldset>
+        </section>
+<!------------------------------------------------------------------------------>        
+        <section>
+            <fieldset id="atividade02">
+                <legend>ATIVIDADE02</legend>
+                
+                <label for="nota01">Nota 01:</label>
+                 <input type="number" id="nota01" required>
+    
+                 <label for="nota02">Nota 02:</label>
+                 <input type="number" id="nota02" required>
+    
+                 <label for="nota03">Nota 03:</label>
+                 <input type="number" id="nota03" required>
 
-    <form id="form">   
-        <fieldset>
-            <legend>ATIVIDADE 01</legend>
+                 <label for="nota04">Nota 04:</label>
+                 <input type="number" id="nota04" required>
+                
+                 <div>
+                    <label for="result02">Média: </label>
+                    <textarea id="result02" readonly></textarea>
+                    <button id="btn-media" title="Calcular média">Média</button>
+                 </div>
+            </fieldset>
+        </section>
+<!------------------------------------------------------------------------------>
+        <section>
+            <fieldset id="atividade03">
+                <legend>ATIVIDADE03</legend>
 
-            <label class="lbl-input">Anos:</label>
-            <input class="input" type="number"  required>         
+                <label for="numero">Número:</label>
+                <input on="" type="number" id="numero" required title="Informe um número">
+                
+                <div>
+                    <label for="result03">Números impares:</label>
+                    <textarea id="result03" readonly></textarea>
+                    <button id="btn-impares">Mostrar impares</button>
+                </div>   
+            </fieldset>
+        </section>
+<!------------------------------------------------------------------------------>
+        <section>
+            <fieldset id="atividade04">
+                <legend>ATIVIDADE04</legend>
+                
+                <label for="usuario">Usuário:</label>
+                <input type="text" id="usuario" title="Digite seu Usuário">
 
-            <label class="lbl-input">Meses:</label>
-            <input class="input" type="number"  required> 
+                <label for="senha">Senha:</label>
+                <input type="text" id="senha" title="Digite sua senha">
+                
+                <button id="btn-entrar">Entrar</button>
 
-
-            <label class="lbl-input">Dias:</label>
-            <input class="input" type="number" required>
-
-            <div id="box-result">
-                <label id="lbl-resultado">Resultado:</label>
-                <textarea name="Resultado" id="resultado-input" readonly></textarea>
-                <button  id="btn-calcular">Calcular</button>
-            </div>
-
-        </fieldset> 
-    </form>
-
-
-    <!------------------------------------------------------------------------>
-
-    <form id="form02">
-
-        <fieldset>
-            <legend>ATIVIDADE 02</legend>
-
-            <label class="lbl-input02">Nota 01</label>
-            <input type="number" class="input02" required>
-
-            <label class="lbl-input02">Nota 02</label>
-            <input type="number" class="input02" required>
-
-            <label class="lbl-input02">Nota 03</label>
-            <input type="number" class="input02" required>
-
-            <label class="lbl-input02">Nota 04</label>
-            <input type="number" class="input02" required>
-
-            <div id="box-result02">
-                <label id="lbl-resultado02">Média</label>
-                <textarea id="resultado02" readonly></textarea>
-                <button id="btn02">Média</button>
-            </div>
-        </fieldset>
-
-
-
-
-
-    </form>
-
-
+            </fieldset>
+        </section>
+    </main>
 </body>
 </html>

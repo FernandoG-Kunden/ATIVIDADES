@@ -111,5 +111,5 @@ function MediaNotas() {
 
     Media = (parseInt(Nota01) + parseInt(Nota02) + parseInt(MaiorNota)) / 3
 
-    result02.value = Media
+    result02.value = Media.toFixed(2)
 }

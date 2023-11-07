@@ -11,36 +11,37 @@ main{
     gap: 30px;
 }
 
-#atividade01{
+.atividade{
     display: flex;
     flex-direction: column;
     margin-top: 15px;
+    margin-bottom: 20px;
     width: 350px;
 }
 
-#atividade01 legend{
+.atividade legend{
     margin-left: 15px;
 }
 
-#atividade01 label{
+.atividade label{
     margin-bottom: 2px;
     margin-left: 13px;
     margin-top: 10px;
 }
 
-#atividade01 input{
+.atividade input{
     margin-bottom: 5px;
     margin-left: 20px;
     width: 150px; ;
     padding-left: 5px;
 }
 
-#atividade01 div{
+.atividade div{
     display: flex;
     flex-direction: column;
 }
 
-#atividade01 div textarea{
+.atividade div textarea{
     width: 300px;
     height: 110px;
     margin-left: 13px;
@@ -48,128 +49,10 @@ main{
     padding: 5px;
 }
 
-#atividade01 div button{
+.atividade div button{
     width: 60px;
     margin-left: 20px;
     margin-bottom: 10px;
     cursor: pointer;
 }
 /*------------------------------------------------------------------------------>*/
-#atividade02{
-    display: flex;
-    flex-direction: column;
-    margin-top: 15px;
-    width: 350px;
-}
-
-#atividade02 legend{
-    margin-left: 15px;
-}
-
-#atividade02 label{
-    margin-bottom: 2px;
-    margin-left: 13px;
-    margin-top: 10px;
-}
-
-#atividade02 input{
-    margin-bottom: 5px;
-    margin-left: 20px;
-    width: 150px; ;
-    padding-left: 5px;
-}
-
-#atividade02 div{
-    display: flex;
-    flex-direction: column;
-}
-
-#atividade02 div textarea{
-    width: 300px;
-    height: 110px;
-    margin-left: 13px;
-    margin-bottom: 5px;
-    padding: 5px;
-}
-
-#atividade02 div button{
-    width: 60px;
-    margin-left: 20px;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-/*------------------------------------------------------------------------------>*/
-#atividade03{
-    display: flex;
-    flex-direction: column;
-    margin-top: 15px;
-    width: 350px;
-}
-
-#atividade03 legend{
-    margin-left: 15px;
-}
-
-#atividade03 label{
-    margin-bottom: 2px;
-    margin-left: 13px;
-    margin-top: 10px;
-}
-
-#atividade03 input{
-    margin-bottom: 5px;
-    margin-left: 20px;
-    width: 150px; ;
-    padding-left: 5px;
-}
-
-#atividade03 div{
-    display: flex;
-    flex-direction: column;
-}
-
-#atividade03 div textarea{
-    width: 300px;
-    height: 110px;
-    margin-left: 13px;
-    margin-bottom: 5px;
-    padding: 5px;
-}
-
-#atividade03 div button{
-    width: 110px;
-    margin-left: 20px;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-/*------------------------------------------------------------------------------>*/
-#atividade04{
-    display: flex;
-    flex-direction: column;
-    margin-top: 15px;
-    width: 350px;
-}
-
-#atividade04 legend{
-    margin-left: 15px;
-}
-
-#atividade04 label{
-    margin-bottom: 2px;
-    margin-left: 13px;
-    margin-top: 10px;
-}
-
-#atividade04 input{
-    margin-bottom: 5px;
-    margin-left: 20px;
-    width: 150px; ;
-    padding-left: 5px;
-}
-
-#atividade04 button{
-    width: 50px;
-    margin-left: 20px;
-    margin-bottom: 10px;
-    cursor: pointer;
-}

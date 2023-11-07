@@ -10,76 +10,85 @@
 <body>
     <main>
         <section>
-            <fieldset id="atividade01">
+            <fieldset id="atividade01" class="atividade">
                 <legend>ATIVIDADE01</legend>
     
-                 <label for="input-anos">Anos:</label>
-                 <input type="number" id="input-anos" required>
-    
-                 <label for="input-meses">Meses:</label>
-                 <input type="number" id="input-meses" required>
-    
-                 <label for="input-dias">Dias:</label>
-                 <input type="number" id="input-dias" required>
+                 <div>
+                    <label for="input-anos">Anos:</label>
+                    <input type="number" id="input-anos" required>
+                 </div>
+                 <div>
+                    <label for="input-meses">Meses:</label>
+                    <input type="number" id="input-meses" required>
+                 </div>    
+                 <div>
+                    <label for="input-dias">Dias:</label>
+                    <input type="number" id="input-dias" required>
+                 </div>
                  <div>
                     <label for="result01">Resultado: </label>
                     <textarea id="result01" readonly></textarea>
-                    <button id="btn-calcular01" title="Calcular dias">Calcular</button>
+                    <button onclick="Atividade01()" title="Calcular dias">Calcular</button>
                 </div>
             </fieldset>
         </section>
 <!------------------------------------------------------------------------------>        
         <section>
-            <fieldset id="atividade02">
+            <fieldset id="atividade02" class="atividade">
                 <legend>ATIVIDADE02</legend>
                 
-                <label for="nota01">Nota 01:</label>
-                 <input type="number" id="nota01" required>
-    
-                 <label for="nota02">Nota 02:</label>
-                 <input type="number" id="nota02" required>
-    
-                 <label for="nota03">Nota 03:</label>
-                 <input type="number" id="nota03" required>
-
-                 <label for="nota04">Nota 04:</label>
-                 <input type="number" id="nota04" required>
-                
+                 <div>
+                    <label for="nota01">Nota 01:</label>
+                    <input type="number" id="nota01" required>
+                 </div>
+                 <div>
+                    <label for="nota02">Nota 02:</label>
+                    <input type="number" id="nota02" required>
+                 </div>
+                 <div>
+                    <label for="nota03">Nota 03:</label>
+                    <input type="number" id="nota03" required>
+                 </div>
+                 <div>
+                    <label for="nota04">Nota 04:</label>
+                    <input type="number" id="nota04" required>
+                 </div>
                  <div>
                     <label for="result02">Média: </label>
                     <textarea id="result02" readonly></textarea>
-                    <button id="btn-media" title="Calcular média">Média</button>
+                    <button onclick="Atividade02()" title="Calcular média">Média</button>
                  </div>
             </fieldset>
         </section>
 <!------------------------------------------------------------------------------>
         <section>
-            <fieldset id="atividade03">
+            <fieldset id="atividade03" class="atividade">
                 <legend>ATIVIDADE03</legend>
 
-                <label for="numero">Número:</label>
-                <input on="" type="number" id="numero" required title="Informe um número">
-                
-                <div>
+                 <div>
+                    <label for="numero">Número:</label>
+                    <input on="" type="number" id="numero" required title="Informe um número">
+                 </div>
+                 <div>
                     <label for="result03">Números impares:</label>
                     <textarea id="result03" readonly></textarea>
-                    <button id="btn-impares">Mostrar impares</button>
-                </div>   
+                    <button onclick="Atividade03()" title="Mostrar números impares">impares</button>
+                 </div>   
             </fieldset>
         </section>
 <!------------------------------------------------------------------------------>
         <section>
-            <fieldset id="atividade04">
+            <fieldset id="atividade04" class="atividade">
                 <legend>ATIVIDADE04</legend>
-                
-                <label for="usuario">Usuário:</label>
-                <input type="text" id="usuario" title="Digite seu Usuário">
-
-                <label for="senha">Senha:</label>
-                <input type="text" id="senha" title="Digite sua senha">
-                
-                <button id="btn-entrar">Entrar</button>
-
+                 <div>
+                    <label for="usuario">Usuário:</label>
+                    <input type="text" id="usuario" title="Digite seu Usuário">
+                 </div>
+                 <div>
+                    <label for="senha">Senha:</label>
+                    <input type="text" id="senha" title="Digite sua senha">
+                    <button id="btn-entrar">Entrar</button>
+                 </div>
             </fieldset>
         </section>
     </main>

@@ -126,4 +126,65 @@ function Atividade04(){
     }
 }
 //-------------------------------------------------------------------------------
+function Atividade05(){
+    const Input  = document.querySelector('#atividade05 Input')
+    let   Senha = Input.value;
+    
+    ValidaSenha(Senha);
+}
 
+function ValidaSenha(senha){
+    var letrasMaiusculas = /[A-Z]/;
+    var letrasMinusculas = /[a-z]/; 
+    var numeros = /[0-9]/;
+    var QuantidadeLetras = 0;
+    var auxNumero = 0;
+
+    if(senha.length < 8 || senha.length > 10){
+        alert('Senha deve ter entre 8 a 10 caracteres!')
+        return;
+    }
+    for(let i = 0; i < senha.length; i++){
+        if (letrasMaiusculas.test(senha[i]) || letrasMinusculas.test(senha[i])){
+            QuantidadeLetras++;
+        }
+        if (numeros.test(senha[i])){
+            auxNumero++;
+        }
+    }
+
+    if(auxNumero <= 0){
+        alert('Senha deve conter pelo menos um número!')
+    }
+    else if(QuantidadeLetras <= 0){
+        alert('Senha deve conter pelo menos uma letra!')    
+    }
+    else{
+        alert('Login efetuado com sucesso!')
+    };
+}
+//-------------------------------------------------------------------------------
+function Atividade06(){
+    const Input       = document.querySelector('#atividade06 Input')
+    const Resultado06 = document.querySelector('#atividade06 textarea')
+    let ValorCelsius;
+
+    if(Input.value === ''){
+        alert('Campo não pode ser vazio, verifique!')
+        Input.focus;
+        Resultado06.value = null;
+        return;
+    }
+    else{
+        ValorCelsius =  ConversorFahrenheitCelsius(Input.value);
+        Resultado06.value = ValorCelsius.toFixed(2); 
+    }
+}
+
+function ConversorFahrenheitCelsius(valor){
+    let resultado;
+
+    resultado = (valor - 32) / 1.8;
+    return resultado;
+}
+//-------------------------------------------------------------------------------

@@ -144,6 +144,10 @@ function ValidaSenha(senha){
         alert('Senha deve ter entre 8 a 10 caracteres!')
         return;
     }
+    else if(senha.includes(' ')){
+        alert('Senha não pode conter espaços!')
+        return;
+    }
     for(let i = 0; i < senha.length; i++){
         if (letrasMaiusculas.test(senha[i]) || letrasMinusculas.test(senha[i])){
             QuantidadeLetras++;
@@ -152,12 +156,13 @@ function ValidaSenha(senha){
             auxNumero++;
         }
     }
-
     if(auxNumero <= 0){
         alert('Senha deve conter pelo menos um número!')
+        return;
     }
     else if(QuantidadeLetras <= 0){
-        alert('Senha deve conter pelo menos uma letra!')    
+        alert('Senha deve conter pelo menos uma letra!') 
+        return;   
     }
     else{
         alert('Login efetuado com sucesso!')
@@ -186,5 +191,44 @@ function ConversorFahrenheitCelsius(valor){
 
     resultado = (valor - 32) / 1.8;
     return resultado;
+}
+//-------------------------------------------------------------------------------
+function Atividade07(){
+    const Input    = document.querySelectorAll('#atividade07 Input')
+    const result07 = document.querySelector('#atividade07 textarea')
+    
+    if(ValidaCampoVazio(Input, 0) === false){
+        result07.value = null;
+        return;
+    }
+    else if(ValidaCampoVazio(Input, 1) === false){
+        result07.value = null;
+        return;
+    }
+    else if(ValidaCampoVazio(Input, 2) === false){
+        result07.value = null;
+        return;   
+    }
+    CalculaEquacaoSegundaGrau(Input[0].value, Input[1].value, Input[2].value, result07)
+    
+}
+
+function CalculaEquacaoSegundaGrau(A,B,C, campo){
+    let delta;
+    let raiz;
+    let Divisor;
+    let X1;
+    let X2;
+    let resultado;
+
+    delta = B ** 2 - (4*(A * C))
+    raiz = Math.sqrt(delta);
+    Divisor = 2 / A;
+
+    X1 = (-(B) + raiz) /  Divisor
+
+    X2 = (-(B) - raiz) /  Divisor
+    
+    campo.value  = "x' = " + X1 + " e x'\' = " + X2
 }
 //-------------------------------------------------------------------------------

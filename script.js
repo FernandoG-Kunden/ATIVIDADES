@@ -44,23 +44,27 @@ function Atividade02(){
     const result   = document.querySelector('#atividade02 div textarea');
     let TotalMedia; 
     
-    if (ValidaCampoVazio(Input, 0) === false || ValidaCampoNegativo(Input, 0) === false){
+    if(ValidaCampoVazio(Input, 0) === false || ValidaCampoNegativo(Input, 0) === false){
         result.value = null;
         return;
     }
-    if (ValidaCampoVazio(Input, 1) === false || ValidaCampoNegativo(Input, 1) === false){
+    if(ValidaCampoVazio(Input, 1) === false || ValidaCampoNegativo(Input, 1) === false){
         result.value = null;
         return;
     }
-    if (ValidaCampoVazio(Input, 2) === false || ValidaCampoNegativo(Input, 2) === false){
+    if(ValidaCampoVazio(Input, 2) === false || ValidaCampoNegativo(Input, 2) === false){
         result.value = null;
         return;
     }
-    if (ValidaCampoVazio(Input, 3) === false || ValidaCampoNegativo(Input, 3) === false){
+    if(ValidaCampoNegativo(Input, 3) === false){
         result.value = null;
         return;
     }
-    
+    if(Input[3].value === ''){
+        Input[3].value = 0; 
+    }
+
+
     if(parseInt(Input[2].value) > parseInt(Input[3].value)){
         TotalMedia = (parseInt(Input[0].value) + parseInt(Input[1].value) + parseInt(Input[2].value)) / 3
         result.value = TotalMedia.toFixed(2)
@@ -95,6 +99,31 @@ function Atividade03(){
         }
     }
     result.value = NumerosImpares;  
+}
+//-------------------------------------------------------------------------------
+function Atividade04(){
+    const Input  = document.querySelectorAll('#atividade04 Input')
+    
+    if(ValidaCampoVazio(Input, 0) === false){
+        return;
+    }
+    if(ValidaCampoVazio(Input, 1) === false){
+        return;
+    }
+    
+    if(Input[0].value != 'KUNDEN'){
+        alert('Usuário incorreto, verifique!')
+        Input[0].focus();
+        return;
+    }
+    else if(Input[1].value != 'KUNDENJS2023'){
+        alert('Senha incorreto, verifique!')
+        Input[1].focus();
+        return;
+    }
+    else{
+        alert('Login efetuado com sucesso!')
+    }
 }
 //-------------------------------------------------------------------------------
 

@@ -289,3 +289,66 @@ function ValidaEspacos(string){
     return ContEspacos;
 }
 //-------------------------------------------------------------------------------
+function Atividade09(){
+    const input                 = document.querySelectorAll('#atividade09 input')
+    const result09              = document.querySelector('#atividade09 textarea')
+    let   ValorTotalVenda       = parseInt(input[2].value) * parseInt(input[3].value)
+    let   ComissaoTotalPorCarro = parseInt(input[3].value) * (parseInt(input[1].value) / 100);
+    let   ComissaoTotal         = parseInt(input[2].value) * parseInt(ComissaoTotalPorCarro);
+    let   ComissaoExtra         = 0;
+    let   TotalReceber;
+
+    if (ValidaCampoVazio(input, 0) === false || ValidaCampoNegativo(input, 0) === false){
+        result09.value = null;
+        return;
+    }
+    if (ValidaCampoVazio(input, 1) === false || ValidaCampoNegativo(input, 1) === false){
+        result09.value = null;
+        return;
+    }
+    if (ValidaCampoVazio(input, 2) === false || ValidaCampoNegativo(input, 2) === false){
+        result09.value = null;
+        return;
+    }
+    if (ValidaCampoVazio(input, 3) === false || ValidaCampoNegativo(input, 3) === false){
+        result09.value = null;
+        return;
+    }
+    
+    if(ValorTotalVenda >= 100000){
+        ComissaoExtra = parseInt(ValorTotalVenda) * 0.075;
+    }
+    if(ComissaoExtra > 0){
+        TotalReceber = parseInt(input[0].value) + parseInt(ComissaoTotal) + parseInt(ComissaoExtra);
+        result09.value = 'Salário = R$ ' + input[0].value + ', Comissão total = R$ ' + ComissaoTotal + ', como a venda passou de 100 mil recebe uma comissão extra = R$ ' + ComissaoExtra + ', totalizando assim R$ ' + TotalReceber
+    }
+    else{
+        TotalReceber = parseInt(input[0].value) + parseInt(ComissaoTotal);
+        result09.value = 'Salário = R$ ' + input[0].value + ', Comissão total = R$ ' + ComissaoTotal +  ', totalizando assim R$ ' + TotalReceber
+    }  
+}
+//-------------------------------------------------------------------------------
+function Atividade10(){
+    const input = document.querySelectorAll('#atividade10 textarea');
+    let ValorInput = input[0].value
+    let ValorInputFormatado = ValorInput.replace(/\s/g, '').toLowerCase()
+    let Array = ValorInputFormatado.split(',');
+    let ArrayTrigo = [];
+    let ArrayJoio = [];
+
+    Array.map((string) => {
+        if(string === 'joio'){
+            ArrayJoio.push(string + '\n');  
+        }
+        else if(string === 'trigo'){
+            ArrayTrigo.push(string + '\n');  
+        }
+    })
+
+    input[1].value = ArrayJoio + ArrayJoio.length;
+    input[2].value = ArrayTrigo + ArrayTrigo.length;
+}
+
+
+
+ 

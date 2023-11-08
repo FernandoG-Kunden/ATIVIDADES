@@ -232,3 +232,60 @@ function CalculaEquacaoSegundaGrau(A,B,C, campo){
     campo.value  = "x' = " + X1 + " e x'\' = " + X2
 }
 //-------------------------------------------------------------------------------
+function Atividade08(){
+    const input    = document.querySelector('#atividade08 input');
+    const result08 = document.querySelector('#atividade08 textarea')
+    const string   = input.value;
+    let QuantidadeVogais  = ValidaVogais(string);
+    let QuantidadeEspacos = ValidaEspacos(string);
+    let VogalSingular;
+    let EspacoSingular;
+
+    if(input.value === ''){
+        input.focus;
+        result08.value = null;
+        alert('Campo não pode ser vazio!')
+        return;
+    }
+
+    if(QuantidadeVogais === 1){
+        VogalSingular = ' vogal e '
+    }
+    else{
+        VogalSingular = ' vogais e '
+    }
+    if(QuantidadeEspacos === 1){
+        EspacoSingular = ' espaço'
+    }
+    else{
+        EspacoSingular = ' espaços'
+    }
+
+    result08.value = 'Essa frase contem ' + QuantidadeVogais + VogalSingular + QuantidadeEspacos + EspacoSingular;
+
+}
+
+function ValidaVogais(string){
+    let QuantidadeCaracteres = string.length
+    let ContVogal = 0;
+
+    for(let i = 0; i < QuantidadeCaracteres; i++){
+        if(string[i] === 'a' || string[i] === 'e' || string[i] === 'i' || string[i] ==='o' || string[i] === 'u'){
+            ContVogal++;
+        }
+    }
+    return ContVogal;
+}
+
+function ValidaEspacos(string){
+    let QuantidadeCaracteres = string.length
+    let ContEspacos = 0;
+
+    for(let i = 0; i < QuantidadeCaracteres; i++){
+        if(string[i] === ' '){
+            ContEspacos++;
+        }
+    }
+    return ContEspacos;
+}
+//-------------------------------------------------------------------------------

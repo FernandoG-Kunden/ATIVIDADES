@@ -336,6 +336,12 @@ function Atividade10(){
     let ArrayTrigo = [];
     let ArrayJoio = [];
 
+    if (ValidaCampoVazio(input, 0) === false || ValidaCampoNegativo(input, 0) === false){
+        input[2].value = null;
+        input[1].value = null;
+        return;
+    }
+    
     Array.map((string) => {
         if(string === 'joio'){
             ArrayJoio.push(string + '\n');  
@@ -345,10 +351,42 @@ function Atividade10(){
         }
     })
 
-    input[1].value = ArrayJoio + ArrayJoio.length;
-    input[2].value = ArrayTrigo + ArrayTrigo.length;
+    if(ArrayJoio.length <= 0){
+        input[1].value = null;
+    }  
+    else{
+        input[1].value =  ArrayJoio + ArrayJoio.length;
+    }
+    if(ArrayTrigo.length <= 0){
+        input[2].value = null;
+    }  
+    else{
+        input[2].value =  ArrayTrigo + ArrayTrigo.length;
+    };
 }
 
+//-------------------------------------------------------------------------------
+function Atividade11(){
+    const input    = document.querySelectorAll('#atividade11 input');
+    const result11 = document.querySelector('#atividade11 textarea');
+    let resultado11;
 
+    if (ValidaCampoVazio(input, 0) === false || ValidaCampoNegativo(input, 0) === false){
+        result11.value = null;
+        return;
+    }
+    if (ValidaCampoVazio(input, 1) === false || ValidaCampoNegativo(input, 1) === false){
+        result11.value = null;
+        return;
+    }
+    if (ValidaCampoVazio(input, 2) === false || ValidaCampoNegativo(input, 2) === false){
+        result11.value = null;
+        return;
+    }
+
+    resultado11 = parseInt(input[0].value) * ((1 + parseInt(input[1].value)) ** parseInt(input[2].value))
+    console.log(resultado11)
+    result11.value = resultado11.toFixed(2)
+}
 
  

@@ -377,6 +377,7 @@ function Atividade10(){
 function Atividade11(){
     const input    = document.querySelectorAll('#atividade11 input');
     const result11 = document.querySelector('#atividade11 textarea');
+    let PorcentagemTotal;
     let resultado11;
 
     if (ValidaCampoVazio(input, 0) === false || ValidaCampoNegativo(input, 0) === false){
@@ -392,8 +393,9 @@ function Atividade11(){
         return;
     }
 
-    resultado11 = parseInt(input[0].value) * ((1 + parseInt(input[1].value)) ** parseInt(input[2].value))
-    console.log(resultado11)
+    PorcentagemTotal =  (((1 + (parseInt(input[1].value) / 100))) ** parseInt(input[2].value))
+    resultado11 = parseInt(input[0].value) * PorcentagemTotal;
+    
     result11.value = resultado11.toFixed(2)
 }
 

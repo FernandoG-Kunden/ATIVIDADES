@@ -344,24 +344,32 @@ function Atividade10(){
     
     Array.map((string) => {
         if(string === 'joio'){
-            ArrayJoio.push(string + '\n');  
+            ArrayJoio.push(string);  
         }
         else if(string === 'trigo'){
-            ArrayTrigo.push(string + '\n');  
+            ArrayTrigo.push(string);  
         }
     })
 
     if(ArrayJoio.length <= 0){
-        input[1].value = null;
-    }  
-    else{
-        input[1].value =  ArrayJoio + ArrayJoio.length;
+        input[1].value = 'Não possui palavras joio';
+    } 
+    else if(ArrayJoio.length === 1){
+        input[1].value =  ArrayJoio + ' Contendo assim ' + ArrayJoio.length + ' palavra.';
     }
-    if(ArrayTrigo.length <= 0){
-        input[2].value = null;
-    }  
     else{
-        input[2].value =  ArrayTrigo + ArrayTrigo.length;
+        input[1].value =  ArrayJoio + ' Contendo assim ' + ArrayJoio.length + ' palavras.';
+    }
+
+
+    if(ArrayTrigo.length <= 0){
+        input[2].value = 'Não possui palavras trigo';
+    }
+    else if(ArrayTrigo.length === 1){
+        input[2].value =  ArrayTrigo + ' Contendo assim ' + ArrayTrigo.length + ' palavra.';
+    }
+    else{
+        input[2].value =  ArrayTrigo + ' Contendo assim ' + ArrayTrigo.length + ' palavras.';
     };
 }
 
